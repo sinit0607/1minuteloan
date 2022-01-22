@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:one_minute_loan/pages/whatisapersonalloanpage.dart';
 
-class personalloan extends StatefulWidget {
-  const personalloan({Key? key}) : super(key: key);
+class ApplyNow extends StatefulWidget {
+  const ApplyNow({Key? key}) : super(key: key);
 
   @override
-  _personalloanState createState() => _personalloanState();
+  _ApplyNowState createState() => _ApplyNowState();
 }
 
-class _personalloanState extends State<personalloan> {
+class _ApplyNowState extends State<ApplyNow> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +30,7 @@ class _personalloanState extends State<personalloan> {
               ),
             )),
       ),
-      body: ListView.builder(
+      body:  ListView.builder(
         padding: const EdgeInsets.all(8),
         itemCount: 10,
         itemBuilder: (BuildContext context, int index) {
@@ -40,21 +39,22 @@ class _personalloanState extends State<personalloan> {
             child: Container(
               height: 60,
               decoration: new BoxDecoration(
-                color: Color(0XFF2cbb95),
+                color: Colors.white,
+                border: Border.all(color: Color(0XFF2cbb95)),
                 borderRadius: BorderRadius.all(
-                  Radius.circular(10.0),
+                  Radius.circular(20.0),
                 ),
               ),
               child: Center(
                 child: ListTile(
-                  title: Text("What is a Personal Loan?",style: TextStyle(color: Colors.white),),
+                  title: Text(" SBI Bank Personal Loan",style: TextStyle(color: Colors.black),),
                   trailing: Icon(Icons.arrow_forward_ios_outlined),
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                whatispersonalloan()));
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (BuildContext context) =>
+                    //             whatispersonalloan()));
                   },
                 ),
               ),
