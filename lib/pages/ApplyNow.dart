@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'bankloanpage.dart';
+
 class ApplyNow extends StatefulWidget {
   const ApplyNow({Key? key}) : super(key: key);
 
@@ -50,11 +52,11 @@ class _ApplyNowState extends State<ApplyNow> {
                   title: Text(" SBI Bank Personal Loan",style: TextStyle(color: Colors.black),),
                   trailing: Icon(Icons.arrow_forward_ios_outlined),
                   onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (BuildContext context) =>
-                    //             whatispersonalloan()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                Bankloanpage()));
                   },
                 ),
               ),

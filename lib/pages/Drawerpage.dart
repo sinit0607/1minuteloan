@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:one_minute_loan/pages/FAQSpage.dart';
 
-import 'FQASpage.dart';
-import 'homepage.dart';
+import 'Emicalculator.dart';
 
 class Drawerpage extends StatefulWidget {
   const Drawerpage({Key? key}) : super(key: key);
@@ -11,16 +11,17 @@ class Drawerpage extends StatefulWidget {
 }
 
 class _DrawerpageState extends State<Drawerpage> {
+  List<String> titlelist = ["FAQS", "EMI Calculator"];
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
-
       child: Padding(
         padding: const EdgeInsets.only(top: 18.0),
         child: Center(
           child: ListView.builder(
             padding: const EdgeInsets.all(8),
-            itemCount: 1,
+            itemCount: 2,
             itemBuilder: (BuildContext context, int index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -34,14 +35,25 @@ class _DrawerpageState extends State<Drawerpage> {
                   ),
                   child: Center(
                     child: ListTile(
-                      title: Text("FQAS",style: TextStyle(color: Colors.white),),
+                      title: Text(
+                        titlelist[index],
+                        style: TextStyle(color: Colors.white),
+                      ),
                       trailing: Icon(Icons.arrow_forward_ios_outlined),
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (BuildContext context) =>
-                                    fqas()));
+                        if (index == 0) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      fqas()));
+                        } else if (index == 1) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      Emicalculator()));
+                        }
                       },
                     ),
                   ),

@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     "    Home Loan",
     "    Gold Loan",
     "Education Loan",
-    "   Adhar Loan",
+    "   Aadhar Loan",
     "     Pan Card",
   ];
   List<String> imagelist = [
