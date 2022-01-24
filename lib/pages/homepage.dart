@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
               InkWell(
                 onTap: () {
                   if (index == 0) {
-                    print("1 tapped");
+
                     Navigator.push(
                         context,
                         MaterialPageRoute(

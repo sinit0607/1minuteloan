@@ -150,19 +150,12 @@ class _BankloanpageState extends State<Bankloanpage> {
                         ),
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text('Processing Data')),
-                            );
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                    HomePage()));
                           }
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) => HomePage()));
-                          name.clear();
-                          Birthdate.clear();
-                          Aadharnumber.clear();
-                          amountofloan.clear();
-                          bankaccountnumber.clear();
                         },
                         child: const Text('Submit'),
                       ),
@@ -172,13 +165,14 @@ class _BankloanpageState extends State<Bankloanpage> {
                 Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        primary: Color(0XFF2cbb95),
-                        ),
+                      primary: Color(0XFF2cbb95),
+                    ),
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (BuildContext context) => Emicalculator()));
+                              builder: (BuildContext context) =>
+                                  Emicalculator()));
                     },
                     child: const Text('EMI calculator'),
                   ),
